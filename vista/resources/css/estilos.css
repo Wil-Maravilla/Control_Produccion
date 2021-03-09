@@ -1,0 +1,29 @@
+
+
+body{
+	background: black;
+	color: #eee;
+}
+
+.header,
+.aside{
+	padding: .7em;
+}
+
+.header__title{
+	text-align: center;
+}
+
+.aside__content{
+	display: inline-flex;
+}
+
+.aside__title--menu,
+.aside__title--icon{
+	font-family: Verdana;
+	font-size: 1.7rem;
+}
+
+.menu{
+
+}
