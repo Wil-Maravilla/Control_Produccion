@@ -11,16 +11,27 @@
 <body>
 
 	<header class="header">
-		<h1 class="header__title">Titulo de pagina</h1>
+		<div class="header__content">
+			<div class="header__logo">
+
+			</div>
+            <div class="header__title">
+            	<h1>Titulo de pagina</h1>
+            </div>
+            <div class="header__options">
+            	<i class="fas fa-user-alt"></i>
+            </div>
+		</div>
+
 	</header>
 
 	<aside class="aside">
-		<div class="aside__content">
+		<div class="aside__header">
 				<p class="aside__title--menu">Menu</p>
-				<i class="fa fa-bars aside__title--icon" aria-hidden="true">Button</i>
+				<a href="" class="aside__title--icon"><i class="fa fa-bars " aria-hidden="true"></i></a>
 		</div>
-		<nav class="menu">
-			<ul class="menu__content">
+		<nav>
+			<ul class="menu">
 				<li class="menu__items"><a href="#" class="menu__items--links">Dashboard</a></li>
 				<li class="menu__items"><a href="#" class="menu__items--links">Usuarios</a></li>
 				<li class="menu__items"><a href="#" class="menu__items--links">Pedidos</a></li>
@@ -34,9 +45,8 @@
 	</aside>
 
 	<section class="contenedor">
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Explicabo itaque vel blanditiis cumque consectetur quod aliquid sequi error, libero animi nam sint, magni. Excepturi earum eveniet praesentium, fugit cumque doloribus.</p>
+
 	</section>
 
-	<footer class="pie">Pie de pagina</footer>
 </body>
 </html>
