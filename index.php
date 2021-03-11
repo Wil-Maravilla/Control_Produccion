@@ -16,9 +16,9 @@
 	<header class="header">
 		<div class="header__content">
 			<div class="header__logo">
-				<h1 class="header__title">El Gordito Feliz</h1>
+				<h1 class="header__title">Concentrados El Gordito</h1>
 				<div class="header__toggle">
-					<a href="" class="header__toggle--icon"><i class="fa fa-bars " aria-hidden="true"></i></a>
+					<a href="#" id="toggle__menu" class="header__toggle--icon"><i class="fa fa-bars " aria-hidden="true"></i></a>
 				</div>
 			</div>
             <div class="header__page">
@@ -30,24 +30,55 @@
 		</div>
 	</header>
 
-
-
-
-
-	<!--<aside class="aside">
-		<nav>
+	<aside class="aside" id="contenedorMenu">
+		<nav class="aside__content">
 			<ul class="menu">
-				<li class="menu__items"><a href="#" class="menu__items--links">Dashboard</a></li>
-				<li class="menu__items"><a href="#" class="menu__items--links">Usuarios</a></li>
-				<li class="menu__items"><a href="#" class="menu__items--links">Pedidos</a></li>
-				<li class="menu__items"><a href="#" class="menu__items--links">Inventario</a></li>
-				<li class="menu__items"><a href="#" class="menu__items--links">Combinaciones</a></li>
-				<li class="menu__items"><a href="#" class="menu__items--links">Clientes</a></li>
-				<li class="menu__items"><a href="#" class="menu__items--links">Solicitudes de materia prima</a></li>
-				<li class="menu__items"><a href="#" class="menu__items--links">Proveedores</a></li>
+				<li class="menu__items--subtitle" id="menu__toggle1">Inicio</li>
+				<ul class="menu__level" id="menu__level">
+					<li class="menu__items"><a href="#" class="menu__items--links">Dashboard</a></li>
+				</ul><hr>
+
+
+				<li class="menu__items--subtitle" id="menu__toggle2">Cuentas</li>
+				<ul class="menu__level" id="menu__level2">
+					<li class="menu__items"><a href="#" class="menu__items--links">Usuarios</a></li>
+				</ul><hr>
+
+				<li class="menu__items--subtitle" id="menu__toggle3">Control de produccion</li>
+				<ul class="menu__level" id="menu__level3">
+					<li class="menu__items"><a href="#" class="menu__items--links">Pedidos</a></li>
+					<li class="menu__items"><a href="#" class="menu__items--links">Inventario</a></li>
+					<li class="menu__items"><a href="#" class="menu__items--links">Combinaciones</a></li>
+				</ul><hr>
+
+				<li class="menu__items--subtitle" id="menu__toggle4">Clientes</li>
+				<ul class="menu__level" id="menu__level4">
+					<li class="menu__items"><a href="#" class="menu__items--links">Clientes</a></li>
+				</ul><hr>
+
+				<li class="menu__items--subtitle" id="menu__toggle5">Abastecimiento</li>
+				<ul class="menu__level" id="menu__level5">
+					<li class="menu__items"><a href="#" class="menu__items--links">Solicitudes de materia prima</a></li>
+					<li class="menu__items"><a href="#" class="menu__items--links">Proveedores</a></li>
+				</ul><hr>
+
+				<li class="menu__items--subtitle" id="menu__toggle6">Reportes</li>
+				<ul class="menu__level" id="menu__level6">
+					<li class="menu__items"><a href="#" class="menu__items--links">Pedidos</a></li>
+					<li class="menu__items"><a href="#" class="menu__items--links">Inventario</a></li>
+					<li class="menu__items"><a href="#" class="menu__items--links">Pedidos2</a></li>
+					<li class="menu__items"><a href="#" class="menu__items--links">Inventario2</a></li>
+				</ul><hr>
+
 			</ul>
 		</nav>
+		<div class="footer">
+			<p>Copyright - Wilfredo Carías</p>
+		</div>
 	</aside>
+
+
+
 
 	<section class="contenedor">
 		<p>
@@ -152,8 +183,9 @@
 			<span>Molestiae, ab. Non reiciendis minus tempora nesciunt aliquam, accusamus laudantium vero at ea neque debitis nobis deserunt ex amet placeat et unde impedit eligendi maxime harum possimus excepturi a quis!</span>
 			<span>Aut culpa magni, modi adipisci quidem excepturi quia laborum unde corporis eius repellendus quis, doloremque possimus quasi nisi eaque soluta nulla vel, quaerat iure nemo, libero aperiam qui at! Molestias.</span>
 		</p>
-	</section>-->
+	</section>
 
 	<script src="vista/resources/js/all.min.js"></script>
+	<script src="vista/resources/js/menu.js"></script>
 </body>
 </html>
