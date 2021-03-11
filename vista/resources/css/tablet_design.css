@@ -1,8 +1,0 @@
-@media only screen and (max-width: 700px) {
-  .header__title{
-  	font-size: 1.3rem;
-  }
-  .header__page{
-  	display: none;
-  }
-}

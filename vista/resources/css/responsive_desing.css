@@ -1,0 +1,35 @@
+/*------- Breakpoint para tablet y movil ------------ */
+
+@media only screen and (max-width: 990px) {
+
+  .header__title{
+  	font-size: 1.3rem;
+  }
+
+  .header__page{
+  	display: none;
+  }
+
+  .aside-tablet{
+  	width: 0px;
+    --ancho: 0%;
+  }
+
+  .nav-toggled-tablet{
+  width: 280px !important;
+  }
+
+  .aside::before{
+    content: '';
+    position: fixed;
+    left: 30px;
+    width: var(--ancho);
+    height: 580px;
+    background: rgba(11,11,11, 0.6);
+    z-index: -2;
+  }
+
+  .container{
+  	grid-column: 1 /3;
+  }
+}
