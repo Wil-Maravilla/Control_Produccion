@@ -26,10 +26,15 @@
             	<h2>Dashboard</h2>
             </div>
             <div class="header__options">
-            	<a href="" class="header__options--icon"><i class="fas fa-address-card" aria-hidden="true"></i></a>
+            	<a href="#" id="menu-sesion" class="header__options--icon"><i class="fas fa-address-card" aria-hidden="true"></i></a>
+            	<div class="header__options--menu" id="sesion">
+	            	<a href="#" class="close-sesion">Cerrar sesion</a>
+           		</div>
             </div>
+
 		</div>
 	</header>
+
 
 		<aside class="aside aside-tablet" id="menuContainer">
 			<nav class="aside__content">
@@ -91,11 +96,9 @@
 					<span>Doloremque inventore, id officiis sit veritatis, esse? Quasi praesentium, beatae exercitationem rerum voluptatum, ipsam dolorem pariatur fugiat! Soluta, laboriosam autem aperiam, veritatis illum fugiat. Rem molestias, mollitia atque eveniet vero.</span>
 
 				</p>
+
 			</section>
 		</div>
-
-
-
 
 	<script src="vista/resources/js/all.min.js"></script>
 	<script src="vista/resources/js/menu.js"></script>

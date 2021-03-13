@@ -7,6 +7,7 @@
 	width: 100%;
 	height: 55px;
 	background: #0D0D0D;
+	padding: .7em;
 }
 
 /* ------- Posicionamiento del contenedor del menu, asignacion de dimensiones, color de fondo y scroll ------- */
@@ -28,6 +29,7 @@
 	display: grid;
 	grid-template-columns: 280px 1fr;
 	grid-row: 1fr;
+	z-index: -10;
 }
 
 /* ------- Posicionamiento con grid del contenedor ------- */

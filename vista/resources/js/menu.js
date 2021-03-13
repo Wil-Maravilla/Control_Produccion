@@ -110,3 +110,19 @@ function sliderMenu(screenSize){
 
   }
 }
+
+// Desplegando el logout al hacer click sobre el icono de usuario
+document.getElementById('menu-sesion').addEventListener('click', function(){
+
+	let contenedorLogout = document.querySelector('#sesion');
+	let objContenedor = window.getComputedStyle(contenedorLogout);
+	let valorDisplay = objContenedor.getPropertyValue('display');
+
+	if (valorDisplay == "none")
+	{
+		contenedorLogout.style.display = "block";
+	}
+	else{
+		contenedorLogout.style.display = "none";
+	}
+});
