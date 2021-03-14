@@ -1,0 +1,112 @@
+body{
+	background: url("../img/fondo.jpg");
+	background-size: cover;
+	color: #eee;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 96vh;
+}
+
+.container-header{
+	width: 100%;
+	padding: .5em;
+	box-sizing: border-box;
+}
+
+.header-title{
+	text-align: center;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.container-login{
+	width: 35%;
+	height: 350px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 10px;
+	overflow: hidden;
+	background: rgba(0,0,0,0.9);
+}
+
+.form{
+	width: 70%;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.form__label,
+.form__submit{
+	margin: .7rem 0;
+}
+
+.form__label,
+.form__submit,
+.form__text{
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: 'Karla', sans-serif;
+}
+
+.form__label{
+	font-size: 1.2rem;
+}
+
+.form__text{
+	border: none;
+	background: none;
+	border-bottom: 4px solid #0883F6;
+	outline: none;
+	color: #eee;
+	padding: .2rem .7rem;
+	font-size: 1.1rem;
+}
+
+.form__text:focus{
+	border-bottom: 4px solid #FC5D00;
+}
+
+.form__submit{
+	background: #0883F6;
+	padding: .7rem .5rem;
+	font-size: 1.1rem;
+	color: #eee;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 20px 0;
+	transition: .2s transform;
+}
+
+.form__submit:hover{
+	background: #FC5D00;
+	transform: scale(.9);
+}
+
+/* ------- Breakpoint para tablet ------- */
+@media only screen and (max-width: 990px) {
+	.container-login{
+		width: 50%;
+	}
+}
+
+/* ------- Breakpoint para movil ------- */
+@media only screen and (max-width: 590px) {
+	.container-login{
+		width: 60%;
+		height: 350px;
+	}
+
+	.header-title{
+		font-size: 1.3rem;
+	}
+
+	.form__label,
+	.form__text{
+		font-size: 1rem;
+	}
+}
