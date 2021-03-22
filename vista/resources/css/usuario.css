@@ -1,0 +1,179 @@
+//Archivo que contiene los estilos de la vista usuario
+
+/* Contenedor Padre de todos los elementos de la vista */
+.user-container{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 400px 300px;
+	grid-gap: 30px;
+	z-index: 1000;
+}
+
+/* Contenedor del formulario para agregar nuevos usuarios */
+.add-user{
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 5px 5px 15px black;
+}
+
+.add-user__header{
+	width: 100%;
+	padding: 1em;
+	box-sizing: border-box;
+	background: #366273;
+}
+
+.add-user__title{
+	text-align: center;
+	font-size: 1.2rem;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 900;
+	color: #eee;
+}
+
+.add-user__form{
+	padding: .7rem;
+}
+
+.add-user__form form{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 60px);
+	grid-gap: 20px;
+}
+
+.nombre{
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+	display: flex;
+	flex-direction: column;
+}
+
+.apellido{
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
+}
+
+.usuario{
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
+}
+
+.contra{
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
+}
+
+.permisos{
+	grid-column: 1 / 2;
+	grid-row: 3 / 4;
+}
+
+.nombre,
+.apellido,
+.usuario,
+.contra,
+.permisos{
+	display: flex;
+	flex-direction: column;
+}
+
+.user__form--label,
+.user__form--field{
+	margin: 0 1rem;
+	outline: none;
+	padding: .4rem;
+	border-radius: 5px;
+	font-size: 1.1rem;
+}
+
+.user__form--field{
+	border: 2px solid #366273;
+}
+
+.user__form--label,
+.user__form--field,
+.btn-add-user,
+.btn-mod-user,
+.btn-del-user{
+	font-family: 'Karla', sans-serif;
+}
+
+.btn-add-user{
+	background: #254B59;
+	grid-row: 4 / 5;
+	margin-top: 10px;
+	margin-left: 1rem;
+	padding: .5rem;
+	width: 30%;
+	cursor: pointer;
+	border: none;
+	color: #eee;
+}
+/* Final del formulario */
+
+/* Contenedor de la tabla que contiene los datos de los usuarios registrados*/
+.view-user{
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+.view-user__header{
+	width: 100%;
+	padding: 1em;
+	background: #366273;
+	margin-bottom: 20px;
+}
+
+.view-user__title{
+	text-align: center;
+	font-size: 1.2rem;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 900;
+	color: #eee;
+}
+
+.table-user{
+	width: 95%;
+	border-collapse: collapse;
+}
+
+.table__head{
+	background: #00010D;
+}
+
+.table__head--title{
+	color: #eee;
+}
+
+.table__head--title,
+.table__body--items{
+	font-family:  'Karla', sans-serif;
+	font-weight: 700;
+	padding: .5em;
+}
+
+.btn-mod-user,
+.btn-del-user{
+	padding: .8rem;
+	color: #eee;
+	cursor: pointer;
+	border-radius: 5px;
+	border: none;
+	font-weight: 700;
+}
+
+.btn-mod-user{
+	background: #026775;
+}
+
+.btn-del-user{
+	background: red;
+}
+/* Final del Contenedor de la tabla de usuarios */

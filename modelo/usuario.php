@@ -15,9 +15,11 @@
 		private $contrasenia;
 		private $rol;
 
-		public function __construct($id, $usuario, $contrasenia, $rol)
+		public function __construct($id, $nombre, $apellido, $usuario, $contrasenia, $rol)
 		{
 			$this->id_usuario = $id;
+			$this->nombre = $nombre;
+			$this->apellido = $apellido;
 			$this->usuario = $usuario;
 			$this->contrasenia = $contrasenia;
 			$this->rol = $rol;
@@ -29,6 +31,22 @@
 
 		public function set_id($id){
 			$this->id_usuario = $id;
+		}
+
+		public function get_nombre(){
+			return $this->nombre;
+		}
+
+		public function set_nombre($nombre){
+			$this->nombre = $nombre;
+		}
+
+		public function get_apellido(){
+			return $this->apellido;
+		}
+
+		public function set_apellido($apellido){
+			$this->apellido = $apellido;
 		}
 
 		public function get_usuario(){

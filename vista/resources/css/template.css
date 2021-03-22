@@ -24,7 +24,8 @@
 
 /* ------- Posicionamiento del contenedor principal, construccion de regillas, color de fondo -------*/
 .main_container{
-	position: relative;
+	position: absolute;
+	width: 100%;
 	top: 70px;
 	display: grid;
 	grid-template-columns: 280px 1fr;
