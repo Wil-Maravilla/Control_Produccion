@@ -1,7 +1,5 @@
 <?php
 	include("../controlador/rutas.php");
-	include("../controlador/controlador_usuario.php");
-
 	$ruta = new ruta(__DIR__, "Gestion de usuario");
 ?>
 <?php include "plantilla/header.php" ?>
@@ -36,11 +34,6 @@
 						<label for="permisos" class="user__form--label">Permisos</label>
 						<select name="permisos" id="permisos" class="user__form--field">
 							<option value="null">Seleccione una opcion</option>
-							<?php
-								foreach ($datos_roles as $rol) {
-									echo "<option value='" . $rol['id_rol'] . "'>" . $rol['nombre_rol'] . "</option>";
-								}
-							?>
 						</select>
 					</div>
 
@@ -53,7 +46,7 @@
 			<div class="view-user__header">
 				<p class="view-user__title">Listado de usuarios</p>
 			</div>
-			<table class="table-user" border="1px">
+			<table class="table-user" border="1px" id="tablaUsuarios">
 				<thead class="table__head">
 					<th class="table__head--title">Nombre</th>
 					<th class="table__head--title">Apellido</th>
@@ -62,19 +55,6 @@
 					<th class="table__head--title">Acciones</th>
 				</thead>
 				<tbody class="table__body">
-					<?php
-
-						foreach ($datos_usuario as $dato) {
-							echo "<td class='table__body--items'>" . $dato['nombre'] . "</td>
-								  <td class='table__body--items'>" . $dato['apellido'] . "</td>
-								  <td class='table__body--items'>" . $dato['nombre_usuario'] . "</td>
-								  <td class='table__body--items'>" . $dato['nombre_rol'] . "</td>
-								  <td class='table__body--items'><button class='btn-mod-user' onclick=''>Modificar</button>
-								  <button class='btn-del-user'>Eliminar</button></td>";
-						}
-						//echo "<td>$dato['']</td>";
-
-					 ?>
 				</tbody>
 			</table>
 		</div>

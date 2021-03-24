@@ -1,9 +1,20 @@
 <?php
 
-	require "../modelo/usuario.php";
+	require "../modelo/usuario_M.php";
 	require "../modelo/metodos_usuario.php";
 
 	$metodos = new Metodos_usuario();
+
+	if (isset($_POST['mostrar']))
+	{
+		$datos_usuario = $metodos->obtener_usuarios();
+		echo json_encode($datos_usuario);
+	}
+	if (isset($_POST['mostrar_roles']))
+	{
+		$datos_roles = $metodos->obtener_rol();
+		echo json_encode($datos_roles);
+	}
 
 	if (isset($_POST['guardar']))
 	{
@@ -15,12 +26,5 @@
 	else if (isset($_POST["roles"])) {
 
 	}
-
-
-
-	//$metodos->agregar_usuario($usuario);
-
-	$datos_roles = $metodos->obtener_rol();
-	$datos_usuario = $metodos->obtener_usuarios();
 
  ?>
