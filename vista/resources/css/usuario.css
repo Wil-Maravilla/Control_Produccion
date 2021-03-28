@@ -97,7 +97,8 @@
 .user__form--field,
 .btn-add-user,
 .btn-mod-user,
-.btn-del-user{
+.btn-del-user,
+.search{
 	font-family: 'Karla', sans-serif;
 }
 
@@ -140,8 +141,23 @@
 	color: #eee;
 }
 
+.container-search{
+	margin-bottom:  10px;
+	margin-left: auto;
+	border: 1px solid;
+	padding: .5rem;
+	border-radius: 5px;
+}
+
+.search{
+	border: none;
+	outline: none;
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+
 .table-user{
-	width: 95%;
+	width: 100%;
 	border-collapse: collapse;
 }
 
@@ -178,3 +194,23 @@
 	background: red;
 }
 /* Final del Contenedor de la tabla de usuarios */
+
+/* Inicio de paginacion */
+.pagination{
+	margin-bottom:  10px;
+	margin-left: auto;
+	padding: 1.4rem 0;
+}
+
+.pagination__items{
+	margin-top: 10px;
+	outline: none;
+	padding: .9rem;
+	background: #366273;
+	text-decoration: none;
+	border: 1px solid #eee;
+	color: #eee;
+	font-family:  'Karla', sans-serif;
+	font-weight: 700;
+}
+/* Final de paginacion*/

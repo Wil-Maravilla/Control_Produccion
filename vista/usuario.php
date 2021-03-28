@@ -13,7 +13,7 @@
 				<p class="add-user__title">Agregar usuario</p>
 			</div>
 			<div class="add-user__form">
-				<form action="../controlador/controlador_usuario.php" method="post">
+				<form action="../controlador/usuario_C.php" method="post">
 					<div class="nombre">
 						<label for="nombre" class="user__form--label">Nombre</label>
 						<input type="text" name="nombre" id="nombre" class="user__form--field">
@@ -46,17 +46,26 @@
 			<div class="view-user__header">
 				<p class="view-user__title">Listado de usuarios</p>
 			</div>
-			<table class="table-user" border="1px" id="tablaUsuarios">
+			<div class="container-search">
+				<input type="text" id="buscador" class="search" placeholder="Buscar">
+				<label for="buscador"><i class="fas fa-search"></i></label>
+			</div>
+			<table class="table-user" border="1px">
 				<thead class="table__head">
-					<th class="table__head--title">Nombre</th>
-					<th class="table__head--title">Apellido</th>
-					<th class="table__head--title">Usuario</th>
-					<th class="table__head--title">Permiso</th>
-					<th class="table__head--title">Acciones</th>
+					<tr>
+						<th class="table__head--title">Nombre</th>
+						<th class="table__head--title">Apellido</th>
+						<th class="table__head--title">Usuario</th>
+						<th class="table__head--title">Permiso</th>
+						<th class="table__head--title">Acciones</th>
+					</tr>
 				</thead>
-				<tbody class="table__body">
+				<tbody class="table__body" id="datos">
 				</tbody>
 			</table>
+			<div class="pagination">
+				<a href="#" class="pagination__items">1</a><a href="#" class="pagination__items">2</a><a href="#" class="pagination__items">3</a><a href="#" class="pagination__items">4</a><a href="#" class="pagination__items">5</a>
+			</div>
 		</div>
 
 	</div>
