@@ -42,7 +42,7 @@
 	box-sizing: border-box;
 	color: #000;
 	transition: width .5s;
-	z-index: -1;
+	z-index: -2;
 }
 
 /* ------- Inicio del footer ------- */

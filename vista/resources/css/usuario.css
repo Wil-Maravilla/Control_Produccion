@@ -2,15 +2,16 @@
 
 /* Contenedor Padre de todos los elementos de la vista */
 .user-container{
+	position: relative;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 400px 300px;
 	grid-gap: 30px;
-	z-index: 1000;
 }
 
 /* Contenedor del formulario para agregar nuevos usuarios */
 .add-user{
+	height: 100%;
 	grid-column: 1 / 2;
 	grid-row: 1 / 2;
 	border-radius: 10px;
@@ -214,3 +215,41 @@
 	font-weight: 700;
 }
 /* Final de paginacion*/
+
+/* ----- Inicio de la ventana modal ----- */
+.container-modal{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 800px;
+	background: rgba(0,0,0,0.7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container-modal__header{
+	position: relative;
+	width: 80%;
+	height: 200px;
+	background: #eee;
+}
+
+.container-modal__header p{
+	color: #000;
+}
+
+/* ----- formulario para modificar usuario ----- */
+.update-user{
+	height: 0;
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 5px 5px 15px black;
+	transition: all 10s;
+}
+
+.update-user__visible{
+	height: 100%;
+}

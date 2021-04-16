@@ -8,7 +8,7 @@
 	// Verificando que la peticion js exista y retornando los usuarios de la BD
 	if (isset($_POST['mostrar']))
 	{
-		$datos_usuario = $metodos->obtener_usuarios();
+		$datos_usuario = $metodos->obtener_usuarios($_POST["desde"], $_POST["hasta"]);
 		echo json_encode($datos_usuario);
 	}
 	// Verificando que la peticion js exista y retornando los roles de la BD
@@ -25,6 +25,16 @@
 		$usuario = new Usuario("", $_POST["nombre"], $_POST["apellido"], $_POST["usuario"], $encriptacion, $_POST["permisos"]);
 		$metodos->agregar_usuario($usuario);
 		header("Location:../vista/usuario.php?g=true");
+	}
+
+	// Verficando que la peticion al controlador exista, y devolviendo los registros filtrados del modelo a la vista
+	if (isset($_POST["buscar"])) {
+		echo json_encode($metodos->buscar($_POST["palabraClave"]));
+	}
+
+	if (isset($_POST["paginar"]))
+	{
+		echo json_encode($metodos->paginas());
 	}
 
  ?>
