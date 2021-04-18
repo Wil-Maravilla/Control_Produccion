@@ -37,4 +37,9 @@
 		echo json_encode($metodos->paginas());
 	}
 
+	if(isset($_POST["Modificar"])){
+		$usuario = new Usuario($_POST["idUsuarioM"], $_POST["nombreM"], $_POST["apellidoM"], $_POST["usuarioM"], "", $_POST["permisosM"]);
+		$metodos->modificar_usuario($usuario);
+		header("Location:../vista/usuario.php?m=true");
+	}
  ?>

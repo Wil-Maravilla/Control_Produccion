@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="<?php echo $ruta->get_ruta_src() . 'css/estilos.css'; ?>">
 	<link rel="stylesheet" href="<?php echo $ruta->get_ruta_src() . 'css/template.css'; ?>">
 	<link rel="stylesheet" href="<?php echo $ruta->get_ruta_src() . 'css/responsive_desing.css'; ?>">
+	<link rel="stylesheet" href="<?php echo $ruta->get_ruta_src() . 'css/sweetalert2.css'; ?>">
 	<link rel="stylesheet" href="resources/css/usuario.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">

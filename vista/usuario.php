@@ -49,36 +49,32 @@
 			</div>
 			<div class="add-user__form">
 				<form action="../controlador/usuario_C.php" method="post" >
+					<input type="text" name="idUsuarioM" id="idUsuarioM" hidden>
 					<div class="nombre">
 						<label for="nombre" class="user__form--label">Nombre</label>
-						<input type="text" name="nombre" id="nombreM" class="user__form--field">
+						<input type="text" name="nombreM" id="nombreM" class="user__form--field">
 					</div>
 					<div class="apellido">
 						<label for="apellido" class="user__form--label">Apellido</label>
-						<input type="text" name="apellido" id="apellidoM" class="user__form--field">
+						<input type="text" name="apellidoM" id="apellidoM" class="user__form--field">
 					</div>
 					<div class="usuario">
 						<label for="usuario" class="user__form--label">Nombre de usuario</label>
-						<input type="text" name="usuario" id="usuarioM" class="user__form--field">
+						<input type="text" name="usuarioM" id="usuarioM" class="user__form--field">
 					</div>
-					<div class="contra">
-						<label for="contra" class="user__form--label">Contraseña</label>
-						<input type="password" name="contra" id="contraM" class="user__form--field">
-					</div>
-					<div class="permisos">
+					<div class="permisosM">
 						<label for="permisos" class="user__form--label">Permisos</label>
-						<select name="permisos" id="permisosM" class="user__form--field">
+						<select name="permisosM" id="permisosM" class="user__form--field">
 							<option value="null">Seleccione una opcion</option>
 						</select>
 					</div>
-
-					<input type="submit" name="guardar" value="Modificar" class="btn-add-user">
-					<button class="btn-add-user">Cancelar</button>
+					<div class="update-user__btn--options">
+						<input type="submit" name="Modificar" value="Modificar" class="btn-update-user">
+						<button type="button" class="btn-cancel-update" id="cancelarActualizacion">Cancelar</button>
+					</div>
 				</form>
 			</div>
 		</div>
-
-
 
 		<div class="view-user">
 			<div class="view-user__header">
@@ -108,4 +104,25 @@
 	</div>
 
 <?php include "plantilla/footer.php" ?>
+<?php
+
+	if (isset($_GET["g"]))
+	{
+		echo "<script>Swal.fire(
+			  'Registro Guardado!',
+			  'Haz click en el boton!',
+			  'success')
+			  </script>";
+	}
+
+	if (isset($_GET["m"]))
+	{
+		echo "<script>Swal.fire(
+			  'Registro Actualizado!',
+			  'Haz click en el boton!',
+			  'success')
+			  </script>";
+	}
+
+ ?>
 

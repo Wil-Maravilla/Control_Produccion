@@ -11,6 +11,8 @@
 	class Usuario
 	{
 		private $id_usuario;
+		private $nombre;
+		private $apellido;
 		private $usuario;
 		private $contrasenia;
 		private $rol;

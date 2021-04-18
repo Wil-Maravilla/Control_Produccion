@@ -47,6 +47,27 @@
 
 		}
 
+		public function modificar_usuario($usuario){
+			try
+			{
+				$sentencia = $this->conn->prepare("UPDATE usuario SET nombre = :nombre, apellido = :apellido, nombre_usuario = :usuario, id_rol = :rol WHERE id_usuario = :id_usuario");
+				$sentencia->execute(array(":nombre"=>$usuario->get_nombre(),
+										 ":apellido"=>$usuario->get_apellido(),
+										 ":usuario"=>$usuario->get_usuario(),
+										 ":rol"=>$usuario->get_rol(),
+										 ":id_usuario"=>$usuario->get_id()));
+			}
+			catch(Exception $e)
+			{
+				die("Error: " . $e->GetMessage());
+			}
+			finally
+			{
+				$sentencia->closeCursor();
+			}
+
+		}
+
 		// Metodo para filtrar los registros de la tabla usuario de la BD
 		public function buscar($palabra_filtro){
 
@@ -67,7 +88,7 @@
 
 		public function paginas(){
 			try{
-				return $this->conn->query('SELECT COUNT(*) DIV 5 AS paginas FROM `usuario`')->fetchAll(PDO::FETCH_ASSOC);
+				return $this->conn->query('SELECT COUNT(*) / 10 AS paginas FROM `usuario`')->fetchAll(PDO::FETCH_ASSOC);
 			}
 			catch(Exception $e){
 				die("Error: " . $e->GetMessage());
